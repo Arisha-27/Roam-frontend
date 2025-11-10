@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        coral: "hsl(6, 93%, 71%)",
+        peach: "hsl(20, 100%, 96%)",
+        sky: "hsl(197, 71%, 73%)",
+      },
+      backgroundImage: {
+        'hero-gradient': 'var(--hero-gradient)',
+        'soft-gradient': 'var(--soft-gradient)',
       },
       borderRadius: {
         lg: "var(--radius)",
