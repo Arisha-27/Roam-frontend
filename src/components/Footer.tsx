@@ -6,8 +6,8 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+            <div className="flex items-center space-x-3 mb-4 transition-transform duration-300 hover:scale-110 cursor-pointer">
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center transition-all duration-300 hover:rotate-12 hover:shadow-lg">
                 <span className="text-primary-foreground font-bold text-xl">🧞</span>
               </div>
               <span className="text-xl font-bold text-foreground">RoamGenie</span>
@@ -18,20 +18,20 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <h3 className="font-semibold mb-4 transition-transform duration-300 hover:scale-105">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/trip-planner" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/trip-planner" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block">
                   Trip Planner
                 </Link>
               </li>
               <li>
-                <Link to="/passport-scanner" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/passport-scanner" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block">
                   Passport Scanner
                 </Link>
               </li>
@@ -39,20 +39,20 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
+            <h3 className="font-semibold mb-4 transition-transform duration-300 hover:scale-105">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block">
                   Contact Us
                 </Link>
               </li>
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground">
-          <p>&copy; 2025 RoamGenie. All rights reserved.</p>
+          <p className="transition-transform duration-300 hover:scale-105 inline-block">&copy; 2025 RoamGenie. All rights reserved.</p>
         </div>
       </div>
     </footer>

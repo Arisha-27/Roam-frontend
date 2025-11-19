@@ -5,6 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-travel.jpg";
+import roamgenieLogo from "@/assets/roamgenie.png";
 import itineraryPreview from "@/assets/itinerary-preview.jpg";
 import { Plane, MapPin, Globe, Download } from "lucide-react";
 
@@ -12,11 +13,11 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 bg-soft-gradient">
         <div className="container mx-auto max-w-5xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight transition-transform duration-300 hover:scale-105">
             Craft Unforgettable<br />Itineraries with<br />
             <span className="text-primary">AI Trip Planner</span>
           </h1>
@@ -24,16 +25,16 @@ const Home = () => {
             Your personal trip planner and travel curator, creating custom itineraries tailored to your interests and budget.
           </p>
           <Link to="/trip-planner">
-            <Button size="lg" className="text-lg px-8 py-6 rounded-full">
+            <Button size="lg" className="text-lg px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl">
               Get started—it's free
             </Button>
           </Link>
 
-          <div className="mt-16 rounded-2xl overflow-hidden shadow-2xl border border-border">
+          <div className="mt-16 rounded-2xl overflow-hidden shadow-2xl border border-border transition-all duration-500 hover:shadow-3xl hover:-translate-y-2 cursor-pointer group">
             <img
               src={heroImage}
               alt="Travel destinations"
-              className="w-full h-auto"
+              className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
             />
           </div>
         </div>
@@ -42,12 +43,12 @@ const Home = () => {
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-16">
+          <h2 className="text-4xl font-bold text-center mb-16 transition-transform duration-300 hover:scale-105">
             Everything you need for planning your trip
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
-            <div className="bg-secondary rounded-3xl p-12">
+            <div className="bg-secondary rounded-3xl p-12 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
               <h3 className="text-3xl font-bold mb-4">
                 Adjust your itinerary as needed
               </h3>
@@ -56,45 +57,56 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="rounded-2xl overflow-hidden border border-border">
+            <div className="rounded-2xl overflow-hidden border border-border transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer group">
               <img
                 src={itineraryPreview}
                 alt="Itinerary preview"
-                className="w-full h-auto"
+                className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
               />
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 bg-muted/30">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+          <div className="grid md:grid-cols-4 gap-6">
+            <Card className="p-6 bg-muted/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer group">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12">
                 <Plane className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-3">AI Travel</h3>
               <p className="text-muted-foreground">
-                Generate richly personalized accommodation recommendations. Driven by your unique preferences and tastes, we curate an array of lodging options which not only meet, but exceed your needs.
+                Generate personalized accommodation recommendations based on your unique preferences and budget.
               </p>
             </Card>
 
-            <Card className="p-8 bg-muted/30">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Download className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Offline Access</h3>
-              <p className="text-muted-foreground">
-                Enjoy the convenience of offline accessibility - with the option to download and save your plans as a PDF, you can always have your information at hand, no matter where you are.
-              </p>
-            </Card>
-
-            <Card className="p-8 bg-muted/30">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+            <Card className="p-6 bg-muted/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer group">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Everything in one space</h3>
               <p className="text-muted-foreground">
-                Whether it's your own personalized trip or a bookmarked plan, you'll find everything organized on a single page for your convenience.
+                Find all your personalized trips and bookmarked plans organized on a single page.
               </p>
             </Card>
+
+            <Card className="p-6 bg-muted/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer group">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12">
+                <Download className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Flexible Itineraries</h3>
+              <p className="text-muted-foreground">
+                Adjust your itinerary easily with our AI chatbot - reorder, add, or remove activities as needed.
+              </p>
+            </Card>
+
+            <Card className="p-6 bg-muted/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer group">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12">
+                <Globe className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Visa Information</h3>
+              <p className="text-muted-foreground">
+                Scan your passport to instantly discover visa-free destinations and entry requirements.
+              </p>
+            </Card>
+
           </div>
         </div>
       </section>
@@ -109,7 +121,7 @@ const Home = () => {
             <Button
               size="lg"
               variant="secondary"
-              className="text-lg px-8 py-6 rounded-full mt-4"
+              className="text-lg px-8 py-6 rounded-full mt-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               Try Now
             </Button>
@@ -120,10 +132,10 @@ const Home = () => {
       {/* FAQ Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold mb-12">FAQs</h2>
-          
+          <h2 className="text-4xl font-bold mb-12 transition-transform duration-300 hover:scale-105">FAQs</h2>
+
           <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
+            <AccordionItem value="item-1" className="transition-transform duration-300 hover:translate-x-2">
               <AccordionTrigger className="text-lg font-semibold">
                 What is RoamGenie?
               </AccordionTrigger>
@@ -132,7 +144,7 @@ const Home = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-2">
+            <AccordionItem value="item-2" className="transition-transform duration-300 hover:translate-x-2">
               <AccordionTrigger className="text-lg font-semibold">
                 Is RoamGenie free to use?
               </AccordionTrigger>
@@ -141,7 +153,7 @@ const Home = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-3">
+            <AccordionItem value="item-3" className="transition-transform duration-300 hover:translate-x-2">
               <AccordionTrigger className="text-lg font-semibold">
                 How does RoamGenie create personalized recommendations?
               </AccordionTrigger>
@@ -150,16 +162,7 @@ const Home = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4">
-              <AccordionTrigger className="text-lg font-semibold">
-                Can I access RoamGenie offline?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Yes, you can download your itineraries as PDF files and access them offline whenever you need them during your travels.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-5">
+            <AccordionItem value="item-5" className="transition-transform duration-300 hover:translate-x-2">
               <AccordionTrigger className="text-lg font-semibold">
                 How do I adjust my RoamGenie itinerary?
               </AccordionTrigger>
@@ -168,7 +171,7 @@ const Home = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-6">
+            <AccordionItem value="item-6" className="transition-transform duration-300 hover:translate-x-2">
               <AccordionTrigger className="text-lg font-semibold">
                 Where can I receive support for using RoamGenie?
               </AccordionTrigger>

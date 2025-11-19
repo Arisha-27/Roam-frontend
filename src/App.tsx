@@ -8,6 +8,8 @@ import TripPlanner from "./pages/TripPlanner";
 import PassportScanner from "./pages/PassportScanner";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
 
 const queryClient = new QueryClient();
 
@@ -19,15 +21,18 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />   {/* ✅ FIX */}
           <Route path="/trip-planner" element={<TripPlanner />} />
           <Route path="/passport-scanner" element={<PassportScanner />} />
           <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/signup" element={<SignUp />} />
+          {/* KEEP THIS LAST */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
+
 
 export default App;
